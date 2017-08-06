@@ -91,6 +91,12 @@
  ### git blame
  > 当你在追踪代码中的缺陷想知道这是什么时候为什么被引进来的，用这个命令
  
+ ===============================================
+> git pull = git fetch + git merge
+> git pull --rebase = git fetch + git rebase
+> * 在rebase的过程中，有时也会有conflict，这时Git会停止rebase并让用户去解决冲突，解决完冲突后，用git add命令去更新这些内容，然后不用执行git-commit,直接执行git rebase --continue,这样git会继续apply余下的补丁
+> * 
+ 
  
  
  
