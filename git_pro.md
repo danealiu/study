@@ -64,10 +64,34 @@
  
  -------------------------------------------
  
- > # 服务器上的git
  
- > * ### 协议
+ > * ### 服务器上的git协议
  > * ssh协议是拥有对网络仓库的读写权限
+ 
+ --------------------------------------
+ 
+ ### git 工具
+ 
+ > * git reflog  查看引用日志(在你工作的同时，Git 在后台的工作之一就是保存一份引用日志——一份记录最近几个月你的 HEAD 和分支引用的日志)
+ 
+ > * git show HEAD 查看当前提交，等价于git show HEAD~0
+ > * git show HEAD^，等价于git show HEAD~1
+ 
+ ### git stash
+ > * 储藏你的工作
+ > * git stash
+ > * git stash list
+ > * git stash pop
+ 
+ ### filter-branch 这个会大面积地修改你的历史
+>  git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
+>  你会在所有快照中删除一个名叫 password.txt 的文件，无论它是否存在
+ 
+ 
+ ### git blame
+ > 当你在追踪代码中的缺陷想知道这是什么时候为什么被引进来的，用这个命令
+ 
+ 
  
  
  
